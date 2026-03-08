@@ -1,0 +1,89 @@
+INSERT INTO MEMBER (FirstName, LastName, Gender, DOB, Phone, Email, Address) VALUES
+('Ahnaf','Shakil','Male','1995-09-02','0425185163','ahnaf007shakil@gmail.com','East Hills'),
+('Sarah','Corner','Female','1995-08-30','0427384759','sarah.corner@gemail.com','abc street'),
+('Neo','Anderson','Male','1995-02-18','048570358','neo.anderson@gmail.com','Dream Street'),
+('Trinity','Anderson','Female','1995-11-05','0412345342','trinity.anderson@gmail.com','Dream Street'),
+('Morphious','White','Male','1980-09-22','04058320658','morphious.white@email.com','Center Street');
+
+
+INSERT INTO Membership (MembershipID,MemberID,PlanID,StartDate,EndDate,Status) VALUES
+(1,11,6,'2020-01-15','2022-01-15','Confirmed'),
+(2,12,7,'2021-01-11','2023-01-11','Confirmed'),
+(3,13,8,'2022-01-12','2024-01-12','Confirmed'),
+(4,14,9,'2023-01-15','2025-01-15','Confirmed'),
+(5,15,10,'2024-01-10','2026-01-10','Confirmed');
+
+
+INSERT INTO STAFF (Name,HireDate,Salary) VALUES
+('Shakil Trainer','2020-01-15',45000.00),
+('Ahnaf Trainer','2021-03-10',42000.00),
+('Lucy Reception','2019-07-01',35000.00),
+('David Trainer','2022-05-20',40000.00),
+('Daniel Reception','2021-09-12',36000.00);
+
+INSERT INTO RECEPTIONIST (StaffID,Shift) VALUES
+(6,'Morning'),
+(7,'Afternoon'),
+(8,'Night'),
+(9,'Morning'),
+(10,'Evening');
+
+INSERT INTO MEMBERSHIPPLAN (PlanName, DurationMonths, Price) VALUES
+('Basic',3,99.99),
+('Standard',6,179.99),
+('Premium',12,299.99),
+('Family',6,249.99),
+('Student',3,79.99);
+
+INSERT INTO TRAINER (StaffID,Speciality,Phone) VALUES
+(6,'Yoga','0411222333'),
+(7,'Cardio','0411333444'),
+(8,'Cardio','0457392033'),
+(9,'Muscle','0409372933'),
+(10,'Weights','0411444555');
+
+INSERT INTO CLASS (ClassName,DifficultyLevel,Capacity) VALUES
+('Yoga Beginner','Easy',20),
+('Cardio Blast','Medium',25),
+('Weight Training','Hard',15),
+('Pilates','Medium',18),
+('Spin Class','Hard',20);
+
+
+INSERT INTO CLASSSCHEDULE (ScheduleID,ClassID,StaffID,ScheduledDate,StartTime,EndTime) VALUES
+(6,6,6,'2025-09-21','09:00:00','10:00:00'),
+(7,7,7,'2025-09-22','11:00:00','12:00:00'),
+(8,8,8,'2025-09-23','14:00:00','15:30:00'),
+(9,9,9,'2025-09-24','16:00:00','17:00:00'),
+(10,10,10,'2025-09-25','10:00:00','11:00:00');
+
+INSERT INTO BOOKING (ScheduleID,MemberID,BookingDate,Status) VALUES
+(6,11,'2025-09-20','Confirmed'),
+(7,12,'2025-09-20','Confirmed'),
+(8,13,'2025-09-21','Confirmed'),
+(9,14,'2025-09-21','Confirmed'),
+(10,15,'2025-09-22','Cancelled');
+
+
+INSERT INTO EQUIPMENT (EquipmentName,PurchaseDate,Situation) VALUES
+('Treadmill','2022-01-15','Good'),
+('Dumbbells','2021-06-10','Excellent'),
+('Rowing Machine','2020-03-25','Fair'),
+('Elliptical','2021-11-30','Good'),
+('Spin Bike','2022-07-05','Excellent');
+
+
+INSERT INTO MAINTENANCE (EquipmentID,StaffID,MaintenanceDate,Description) VALUES
+(1,6,'2025-09-10','Lubricated treadmill belt'),
+(2,7,'2025-09-12','Replaced worn grips'),
+(3,8,'2025-09-14','Checked cables'),
+(4,9,'2025-09-15','Tightened bolts'),
+(5,10,'2025-09-16','Cleaned and inspected');
+
+
+INSERT INTO PAYMENT (MembershipID,PaymentDate,Amount,Method) VALUES
+(1,'2025-09-01',99.99,'Credit Card'),
+(2,'2025-09-01',179.99,'Cash'),
+(3,'2025-09-01',299.99,'Credit Card'),
+(4,'2025-09-01',249.99,'Debit Card'),
+(5,'2025-09-01',79.99,'Online');
